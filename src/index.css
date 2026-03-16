@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-neon-purple: #b026ff;
+  --color-neon-blue: #00d2ff;
+  --color-neon-pink: #ff00ff;
+  --color-neon-cyan: #00ffff;
+  --color-neon-green: #39ff14;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-slate-900 font-sans antialiased overflow-x-hidden;
+  }
+}
+
+.glass {
+  @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-xl;
+}
+
+.neon-glow-purple {
+  box-shadow: 0 0 15px rgba(176, 38, 255, 0.4);
+}
+
+.neon-glow-blue {
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
+}
+
+.neon-text-purple {
+  text-shadow: 0 0 8px rgba(176, 38, 255, 0.6);
+}
+
+.neon-text-blue {
+  text-shadow: 0 0 8px rgba(0, 210, 255, 0.6);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
